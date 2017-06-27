@@ -16,6 +16,6 @@ public class SecActivity extends AppCompatActivity {
         int a = it.getIntExtra("va", 0);
         int b = it.getIntExtra("vb", 0);
         TextView tv = (TextView) findViewById(R.id.textView);
-        tv.setText(String.valueOf(a + b));
+        tv.setText(String.valueOf(a + b));   \\\
     }
 }
