@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         it.putExtra("vb", b);
         startActivity(it);
     }
+    public void toPage3(View v)
+    {
+        Intent it = new Intent(MainActivity.this, ThirdActivity.class);
+        startActivity(it);
+    }
 }
