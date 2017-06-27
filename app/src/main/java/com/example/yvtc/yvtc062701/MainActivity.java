@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
     public void toPage3(View v)
     {
         Intent it = new Intent(MainActivity.this, ThirdActivity.class);
-        startActivity(it);
+        startActivityForResult(it, 321);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        TextView tv2 = (TextView) findViewById(R.id.textView2);
+        String str = data.getStringExtra("username");
+        tv2.setText(str);
     }
 }
